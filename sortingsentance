@@ -1,0 +1,9 @@
+class Solution:
+    def sortSentence(self, s: str) -> str:
+        s = s.split()
+        sort_tuples = sorted(s,key= lambda s:s[-1])
+        ans =[]
+        
+        for k,v in enumerate(sort_tuples):
+            ans.append(v[:-1])
+        return " ".join(ans)
